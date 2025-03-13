@@ -5,13 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for responsive design */
+        @media screen and (max-width: 760px) {
+            .navbar-menu { display: none; }
+            .navbar-icon { display: block; }
+            .footer-social { flex-direction: column; }
+        }
+    </style>
 </head>
 <body class="bg-gray-100">
     <header class="bg-blue-800 p-4 text-white">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-xl font-bold">My Portfolio</h1>
             <nav>
-                <ul class="flex space-x-4">
+                <ul class="navbar-menu flex space-x-4">
                     <li><a href="#home" class="hover:underline">Home</a></li>
                     <li><a href="#projects" class="hover:underline">Projects</a></li>
                     <li><a href="#skills" class="hover:underline">Skills</a></li>
@@ -19,6 +27,11 @@
                     <li><a href="#blog" class="hover:underline">Blog</a></li>
                     <li><a href="#contact" class="hover:underline">Contact</a></li>
                 </ul>
+                <button class="navbar-icon text-white px-3 py-2 rounded-md text-sm font-medium hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
             </nav>
         </div>
     </header>
@@ -38,13 +51,12 @@
             </div>
         </div>
     </section>
-    
 
     <section id="projects" class="py-12 bg-gray-100">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold mb-6">My Projects</h2>
             <!-- Project gallery items will go here -->
-             <a href=" https://ogoto99.github.io/css.html/" target="_blank" class="block bg-white p-4 rounded shadow-lg mb-4">
+            <a href="https://ogoto99.github.io/css.html/" target="_blank" class="block bg-white p-4 rounded shadow-lg mb-4">
                 <h3 class="text-xl font-bold">Project 1</h3>
                 <p class="text-lg">This project is a simple website built using HTML and CSS. It features a responsive design and clean layout.</p>
             </a>
@@ -90,12 +102,12 @@
             </div>
         </div>
     </section>
-    
+
     <section id="testimonials" class="py-12 bg-gray-100">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold mb-6">Testimonials</h2>
             <!-- Testimonials section will go here -->
-             <p>Being 18 is a whirlwind of possibilities and challenges. It’s the age of exploration and self-discovery. I’ve been diving into Software Development, learning HTML, and crafting detailed portfolio websites using Tailwind CSS. Balancing my studies and personal life has taught me resilience and time management. I’ve also been pushing my projects to GitHub, a testament to my growing skills and dedication. This journey isn’t just about building a career; it’s about evolving as a person. Each day is a step forward, fueled by passion and curiosity. I’m excited for what the future holds and ready to embrace it with determination.</p>
+            <p>Being 18 is a whirlwind of possibilities and challenges. It’s the age of exploration and self-discovery. I’ve been diving into Software Development, learning HTML, and crafting detailed portfolio websites using Tailwind CSS. Balancing my studies and personal life has taught me resilience and time management. I’ve also been pushing my projects to GitHub, a testament to my growing skills and dedication. This journey isn’t just about building a career; it’s about evolving as a person. Each day is a step forward, fueled by passion and curiosity. I’m excited for what the future holds and ready to embrace it with determination.</p>
         </div>
     </section>
 
@@ -103,7 +115,7 @@
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold mb-6">Blog</h2>
             <!-- Blog section will go here -->
-             <p>Stepping into adulthood is exhilarating and daunting for an 18-year-old. It’s a time when dreams and reality start to blur. Imagine the pressure of choosing a career path, like plunging into Software Development , while also juggling the excitement of newfound independence. Days are filled with learning HTML, crafting responsive designs, and mastering Tailwind CSS for a killer portfolio. The nights, however, are reserved for introspection, music, and catching up with friends. Each day is a step toward shaping a future, grounded in passion and curiosity. It’s a thrilling journey, navigating the unknown while holding onto a vision of what could be.</p>
+            <p>Stepping into adulthood is exhilarating and daunting for an 18-year-old. It’s a time when dreams and reality start to blur. Imagine the pressure of choosing a career path, like plunging into Software Development , while also juggling the excitement of newfound independence. Days are filled with learning HTML, crafting responsive designs, and mastering Tailwind CSS for a killer portfolio. The nights, however, are reserved for introspection, music, and catching up with friends. Each day is a step toward shaping a future, grounded in passion and curiosity. It’s a thrilling journey, navigating the unknown while holding onto a vision of what could be.</p>
         </div>
     </section>
 
@@ -127,24 +139,27 @@
             </form>
         </div>
     </section>
-    
 
-    <footer class="bg-blue-800 text-white py-4">
-        <div class="container mx-auto text-center">
-            <p>My Portfolio &copy; 2025</p>
-            <div class="flex justify-center space-x-4 mt-4">
-                <a href="https://github.com/dashboard" target="_blank" class="hover:underline">GitHub</a>
-                <a href="https://www.linkedin.com/in/melekh-ogoto-541b63353/" target="_blank" class="hover:underline">LinkedIn</a>
-                <a href="https://x.com/Ogoto_Mziza" target="_blank" class="hover:underline">Twitter</a>
-                <a href="https://www.instagram.com/_ogoto?igsh=MXZyY3kxcjVvZXMydg==" target="_blank" class="hover:underline">Instagram</a>
+    <footer class="bg-blue-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <p>&copy; 2022 My Portfolio. All rights reserved.</p>
+            <ul class="footer-social flex space-x-4">
+                <a href="https://github.com/dashboard" target="_blank" class="hover:underline">GitHub</a> 
+                <a href="https://www.linkedin.com/in/melekh-ogoto-541b63353/" target="_blank" class="hover:underline">LinkedIn</a> 
+                <a href="https://x.com/Ogoto_Mziza" target="_blank" class="hover:underline">Twitter</a> 
+                <a href="https://www.instagram.com/_ogoto?igsh=MXZyY3kxcjVvZXMydg==" target="_blank" class="hover:underline">Instagram</a> 
                 <a href="RESUME.pdf" download class="hover:underline">Download Resume</a>
-            </div>
+            </ul>
         </div>
     </footer>
+    <script>
+        // JavaScript for responsive design
+        const navbarIcon = document.querySelector('.navbar-icon');
+        const navbarMenu = document.querySelector('.navbar-menu');
 
-    <div class="fixed bottom-4 right-4">
-        <label class="switch">
-            <input type="checkbox" id="dark-mode-toggle">
-            <span class="slider round"></span>
-        </label>
-        <span class="text-black
+        navbarIcon.addEventListener('click', () => {
+            navbarMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
