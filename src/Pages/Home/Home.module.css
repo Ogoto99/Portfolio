@@ -10,21 +10,22 @@
 .Header_wrapper::after {
     content: '';
     position: absolute;
-    top: 20%;
+    top: 20% ;
     left: -32%;
     width: 60%;
     height: 100%;
-    background-image: url(./../../assets/Beach\ Sunset\ -\ Apps\ on\ Galaxy\ Store.jpg);
     background-repeat: no-repeat;
     z-index: -1;
 }
 .Header_wrapper::before{
-    content: 'Melekh';
-    top: 0;
-    left: 0;
+    content: '';
+    top: 50px;
+    left: 50px;
     position: absolute;
     font-weight: 800;
     font-size: 10rem;
+    opacity: 0.05;
+    z-index: -1;
 }
 
 .header_content {
@@ -82,7 +83,6 @@
     background-color: var(--primary-color);
 }
 
-
 .header_image {
     width: 55%;
     position: absolute;
@@ -94,4 +94,188 @@
 .header_image img{
     height: 100%;
     width: 100%;
+}
+
+/* Service Cards */
+
+.services_cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    padding: 0 12%;
+    margin-top: 200px;
+}
+.services_cards .service_card{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 24px rgba(131, 131, 131, 0.3);
+}
+
+.services_cards .service_card i{
+    font-size: 30px;
+}
+
+
+/* Responsive Media Queries */
+
+@media screen and (max-width:1600px) {
+    .Header_wrapper::after {
+        top: 30%;
+        left: -40%;
+    }
+
+    .header_image {
+        width: 46%;
+    }
+
+    .header_content h2 {
+        font-size: 50px ;
+    }
+
+    .services_cards {
+        padding: 0 8%;
+        margin-top: 120px;
+    }
+
+    .services_cards .service_card {
+        padding: 0 22px;
+    }
+}
+
+@media screen and (max-width:1300px) {
+    .header_content h2 {
+        font-size: 40px;
+    }
+
+    .Header_wrapper::after {
+        width: 75%;
+    }
+
+    .services_cards {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .services_cards .service_card:nth-of-type(3) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        height: 110px;
+        background-color: var(--primary-color);
+        color: #fff;
+    }
+
+    .services_cards .service_card:nth-of-type(3) h3,
+    .services_cards .service_card:nth-of-type(3) p,
+    .services_cards .service_card:nth-of-type(3) i{
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .Header_wrapper::after {
+        top: 15%;
+        left: -65%;
+        width: 100%;
+    }
+
+    .header_image {
+        width: 42%;
+    }
+
+    .header_content h2 {
+        font-size: 30px;
+    }
+
+    .Header_wrapper::before{
+        font-size: 7rem;
+    }
+
+}
+
+@media screen and (max-width:900px) {
+    .header_image {
+        width: 50%;
+        position: relative;
+        right: 0px;
+        top: 0px;
+    }
+
+    .Header_wrapper {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .header_content {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .Header_wrapper::after {
+        top: 10%;
+        left: -85%;
+        width: 100%;
+    }
+
+    .Header_wrapper::before{
+        left: 40%;
+        top: 45%;
+        font-size: 8rem;
+    }
+    
+    .services_cards {
+        grid-template-columns: repeat(1,1fr);
+        margin-top: 40px;
+    }
+
+    .services_cards .service_card:nth-of-type(3) {
+        grid-column-start: auto;
+        grid-column-end: auto;
+        background-color: var(--primary-color);
+        color: #fff;
+    }
+
+    .services_cards .service_card h3,
+    .services_cards .service_card p,
+    .services_cards .service_card i{
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .header_image {
+        width: 70%;
+    }
+
+    .header_content h2 {
+        font-size: 50px;
+    }
+
+    .Header_wrapper::after {
+        display: none;
+    }
+
+    .Header_wrapper::before{
+        top: 40%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .header_image {
+        width: 100%;
+    }
+
+    .header_content h2 {
+        font-size: 30px;
+    }
+
+    .Header_wrapper::before{
+        font-size: 5rem;
+        top: 45%;
+    }
 }

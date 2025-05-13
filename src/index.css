@@ -48,3 +48,10 @@ button::after{
 button:hover:after{
     transform: rotate(0deg);
 }
+
+section {
+    width: 100%;
+    padding: 80px 12%;
+    display: flex;
+    justify-content: space-between;
+}
